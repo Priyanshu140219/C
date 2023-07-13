@@ -1,6 +1,10 @@
 #include<iostream>
 #include<iomanip>
-#include<stdlib.h>
+/*
+    Name : Priyanshu Singha
+    PRN : 22070123087
+    AIM : To make a calculator using C++
+*/
 using namespace std;
 float add();
 float sub();
@@ -14,7 +18,7 @@ int main()
     cin>>ch;
     while(c == 1)
     {
-        cout << "\033[2J\033[1;1H";
+        cout << "\033[2J\033[1;1H";//Clearing the output Screen
         cout<<"PRESS + TO ADD"<<endl<<"PRESS - TO SUBTRACT"<<endl<<"PRESS X TO MULTIPLY"<<endl<<"PRESS / TO DIVIDE"<<endl<<"PRESS % TO FIND REMAINDER"<<endl<<"ENTER CHOICE"<<endl;
         cin>>ch;
         cout<<setprecision(10);
