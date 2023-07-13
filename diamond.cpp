@@ -3,7 +3,7 @@ using namespace std;
 /*
     Name : Priyanshu Singha
     PRN : 22070123087
-    AIM : To make a calculator using C++
+    AIM : To make a diamond star pattern
 */
 int main()
 {
