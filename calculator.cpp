@@ -1,7 +1,6 @@
 #include<iostream>
 #include<iomanip>
 /*
-    Name : Priyanshu Singha
     PRN : 22070123087
     AIM : To make a calculator using C++
 */
@@ -11,17 +10,17 @@ float sub();
 float mul();
 float div();
 int mod();
+int count = 0;
+char menu();
 int main()
 {
     int c = 1;
     char ch;
-    cin>>ch;
     while(c == 1)
     {
         cout << "\033[2J\033[1;1H";//Clearing the output Screen
-        cout<<"PRESS + TO ADD"<<endl<<"PRESS - TO SUBTRACT"<<endl<<"PRESS X TO MULTIPLY"<<endl<<"PRESS / TO DIVIDE"<<endl<<"PRESS % TO FIND REMAINDER"<<endl<<"ENTER CHOICE"<<endl;
-        cin>>ch;
-        cout<<setprecision(10);
+        ch = menu();
+        cout<<setprecision(4);
         switch(ch)
         {
             case '+':
@@ -30,7 +29,7 @@ int main()
             case '-':
                 cout<<"DIFF = "<<sub()<<endl;
                 break;
-            case '*':
+            case 'X':
                 cout<<"PRODUCT = "<<mul()<<endl;
                 break;
             case '/':
@@ -98,3 +97,51 @@ int mod()
     cin>>b;
     return a % b;
 }
+char menu()
+{
+    if(count == 0)
+    {
+        cout<<"CALCULATOR PROGRAM"<<endl<<endl;
+        count++;
+    }
+    char ch;
+    cout<<"PRESS + TO ADD"<<endl<<"PRESS - TO SUBTRACT"<<endl<<"PRESS X TO MULTIPLY"<<endl<<"PRESS / TO DIVIDE"<<endl<<"PRESS % TO FIND REMAINDER"<<endl<<"ENTER CHOICE"<<endl;
+    cin>>ch;
+    return ch;
+}
+/*
+    OUTPUT:
+
+CALCULATOR PROGRAM
+
+PRESS + TO ADD
+PRESS - TO SUBTRACT
+PRESS X TO MULTIPLY
+PRESS / TO DIVIDE
+PRESS % TO FIND REMAINDER
+ENTER CHOICE
++
+ENTER THE FIRST NUMBER : 10
+ENTER THE SECOND NUMBER : 21
+SUM = 31
+DO YOU WANT TO CONTINUE(1/0)?
+
+PS D:\C++> ./calculator
+CALCULATOR PROGRAM
+
+PRESS + TO ADD
+PRESS - TO SUBTRACT
+PRESS X TO MULTIPLY
+PRESS / TO DIVIDE
+PRESS % TO FIND REMAINDER
+ENTER CHOICE
+/
+ENTER THE FIRST NUMBER : 21
+ENTER THE SECOND NUMBER : 4
+QUOTIENT = 5.25
+DO YOU WANT TO CONTINUE(1/0)?
+0
+PS D:\C++>
+
+        
+*/
