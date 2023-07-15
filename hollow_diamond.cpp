@@ -45,12 +45,12 @@ int main()
 /*
 OUTPUT:
 
-PS D:\C++\Patterns> ./diamond
+PS D:\C++\Patterns> ./hollow_diamond
    *
-  ***
- *****
-*******
- *****
-  ***
+  * *
+ *   *
+*     *
+ *   *
+  * *
    *
 */
