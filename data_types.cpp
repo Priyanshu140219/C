@@ -2,9 +2,10 @@
 #include<string>
 #include<iomanip>
 using namespace std;
+
 /*
     PRN : 22070123087
-    Aim : Data types in C++
+    Exp 2 : Data types in C++
 */
 int main()
 {
@@ -12,16 +13,19 @@ int main()
     cout<<"ENTER AN INTEGER : ";
     cin>>a;
     cout<<"INTEGER = "<<a<<endl;
+    cout<<sizeof(int)<<endl;
 
     float b;
     cout<<"ENTER A FLOAT VALUE : ";
     cin>>b;
     cout<<"FLOAT VALUE = "<<b<<endl;
+    cout<<sizeof(float)<<endl;
 
     char c;
     cout<<"ENTER ANY CHARACTER : ";
     cin>>c;
     cout<<"CHARACTER = "<<c<<endl;
+    cout<<sizeof(char)<<endl;
 
     double d;
     cout<<"ENTER A DOUBLE VALUE : ";
@@ -29,11 +33,22 @@ int main()
     cin.ignore();
     cout<<setprecision(10);
     cout<<"DOUBLE VALUE = "<<d<<endl;
+    cout<<sizeof(double)<<endl;
+
+    long double d1;
+    cout<<"ENTER A LONG DOUBLE VALUE : ";
+    cin>>d1;
+    cin.ignore();
+    cout<<setprecision(10);
+    cout<<"LONG DOUBLE VALUE = "<<d1<<endl;
+    cout<<sizeof(long double)<<endl;
+
 
     string s;
     cout<<"ENTER ANY STRING : ";
     getline(cin,s);
     cout<<"THE STRING = "<<s<<endl;
+    cout<<sizeof(string)<<endl;
 
     bool e;
     cout<<"ENTER A BOOLEAN VALUE : ";
@@ -41,6 +56,7 @@ int main()
     cin>>e;
     cout<<boolalpha;
     cout<<"BOOLEAN VALUE = "<<e<<endl;
+    cout<<sizeof(bool)<<endl;
 
     return 0;
 }
@@ -48,15 +64,24 @@ int main()
 PS D:\C++> ./data_types.exe
 ENTER AN INTEGER : 100
 INTEGER = 100
+4
 ENTER A FLOAT VALUE : 2.0123456789
 FLOAT VALUE = 2.01235
+4
 ENTER ANY CHARACTER : @
 CHARACTER = @
+1
 ENTER A DOUBLE VALUE : 2.0123456789
 DOUBLE VALUE = 2.012345679
+8
+ENTER A LONG DOUBLE VALUE : 123.3445
+DOUBLE VALUE = 123.3445
+12
 ENTER ANY STRING : Hello World!!
 THE STRING = Hello World!!
+24
 ENTER A BOOLEAN VALUE : true
 BOOLEAN VALUE = true
+1
 PS D:\C++>    
 */
