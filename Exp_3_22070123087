@@ -39,3 +39,60 @@ ENTER ANY NUMBER : 23087
 8
 7
 */
+
+
+
+/*PRN : 22070123087
+Exp 3 : TO DISPLAY GRADE OF STUDENT
+*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"HOW MANY SUBJECTS ? ";
+    cin>>n;
+    int A[n];
+    for(int i = 0 ; i < n ; ++i)
+    {
+        cout<<"ENTER THE MARKS OF "<<i+1<<" SUBJECT : ";
+        cin>>A[i];
+    }
+    int sum = 0;
+    for(int i = 0 ; i < n ; ++i)
+    {
+        sum += A[i];
+    }
+    int per = ((sum*100) / (n*100));
+    if(per >= 90)
+    {
+        cout<<"GRADE = O";
+    }
+    else if(per >= 80)
+    {
+        cout<<"GRADE = A+";
+    }
+    else if(per >= 70)
+    {
+        cout<<"GRADE = A";
+    }
+    else if(per >= 60)
+    {
+        cout<<"GRADE = B";
+    }
+    else
+    {
+        cout<<"GRADE = F";
+    }
+    return 0;
+}
+/*
+OUTPUT
+HOW MANY SUBJECTS ? 4
+ENTER THE MARKS OF 1 SUBJECT : 92
+ENTER THE MARKS OF 2 SUBJECT : 95
+ENTER THE MARKS OF 3 SUBJECT : 100
+ENTER THE MARKS OF 4 SUBJECT : 88
+GRADE = O
+PS D:\C++>
+*/
