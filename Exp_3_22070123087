@@ -1,0 +1,41 @@
+/*
+    PRN : 22070123087
+    Exp 3 : To take last 5 digit of prn and print them in seperate lines    
+*/
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+int main()
+{
+    vector<int> v;
+    int n , rem;
+    cout<<"ENTER ANY NUMBER : ";
+    cin>>n;
+    vector<int> :: iterator it;
+    int temp = n;
+    while(temp > 0)
+    {
+        rem = temp % 10;
+        v.push_back(rem);
+        temp /= 10;
+    }
+    reverse(v.begin() , v.end());
+    for(it = v.begin() ; it != v.end() ; ++it)
+    {
+        cout<<*it<<endl;
+    }
+    return 0;
+}
+/*
+OUTPUT
+PS D:\C++\vectors> ./digits_of_number
+ENTER ANY NUMBER : 23087
+2
+3
+0
+8
+7
+*/
