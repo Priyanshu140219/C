@@ -1,0 +1,152 @@
+/*
+    PRN : 22070123087
+    Exp 5 : Statement control in C++
+*/
+#include<bits/stdc++.h>
+#include"even_odd.cpp"
+#include"seven_days.cpp"
+#include"problems_exp_5.cpp"
+#include"patterns.cpp"
+int main()
+{
+    int c;
+    // cout<<"PRESS 1 for even odd"<<endl<<"Press 2 for seven days"<<endl<<"Press 3 for comparision"<<endl;
+    // cin>>c;
+    int ch = 1;
+    while(ch == 1)
+    {
+        cout<<"PRESS 1 for even odd"<<endl<<"Press 2 for seven days"<<endl<<"Press 3 for comparision"<<endl<<"PRESS 4 FOR PATTERN"<<endl;
+        cin>>c;
+        switch(c)
+        {
+            case 1:
+                even_odd();
+                break;
+            case 2:
+                seven_days();
+                break;
+            case 3:
+                comp();
+                break;
+            case 4:
+                pattern();
+                break;
+            default:
+                cout<<"YOU PRESSED THE WRONG KEY";
+                break;
+        }
+        cout<<"PRESS 1 TO CONTINUE"<<endl;
+        cin>>ch;
+    }
+    return 0;
+}
+/*
+OUTPUT
+PS D:\C++\New folder> ./exp_5.exe
+PRESS 1 for even odd
+Press 2 for seven days
+Press 3 for comparision
+PRESS 4 FOR PATTERN
+1
+ENTER THE NUMBER : 2
+EVEN NUMBER
+PRESS 1 TO CONTINUE
+1
+PRESS 1 for even odd
+Press 2 for seven days
+Press 3 for comparision
+PRESS 4 FOR PATTERN
+2
+M for Monday
+T for Tuesday
+W For Wednesday
+t for Thursday
+F for Friday
+S for Saturdau
+s for sunday
+ENTER CHOICE
+s
+Sunday
+PRESS 1 TO CONTINUE
+1
+PRESS 1 for even odd
+Press 2 for seven days
+Press 3 for comparision
+PRESS 4 FOR PATTERN
+3
+ENTER THE FIRST NUMBER : 1
+ENTER THE SECOND NUMBER : 4
+ENTER THE FIRST NUMBER : 2
+4 IS THE LARGEST
+PRESS 1 TO CONTINUE
+1
+PRESS 1 for even odd
+Press 2 for seven days
+Press 3 for comparision
+PRESS 4 FOR PATTERN
+4
+ENTER NUMBER OF ROWS : 4
+   1
+  121
+ 12321
+1234321
+PRESS 1 TO CONTINUE
+0
+PS D:\C++\New folder>
+*/
+
+
+/*
+even_odd.cpp
+*/
+#include<bits/stdc++.h>
+using namespace std;
+void even_odd()
+{
+    int a ;
+    cout<<"ENTER THE NUMBER : ";
+    cin>>a;
+    if(a % 2 == 0|| a == 0)
+    {
+        cout<<"EVEN NUMBER"<<endl;
+    }
+    else
+    {
+        cout<<"ODD NUMBER"<<endl;
+    }
+}
+
+
+
+/*
+patterns.cpp
+*/
+#include<bits/stdc++.h>
+using namespace std;
+void pattern()
+{
+    int n ; 
+    int k = 0;
+    cout<<"ENTER NUMBER OF ROWS : ";
+    cin>>n;
+    int c = (2*n) - 1;
+    for(int i = 1 ; i <= n ; ++i)
+    {
+        k = 1;
+        for(int j = 1 ; j <= c ; ++j)
+        {
+            if(j >= (n-i+1) && j <= (n-1+i))
+            {
+                cout<<k;
+                j < n ? ++k : --k;
+            }
+            else
+            {
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+}
+
+/*
